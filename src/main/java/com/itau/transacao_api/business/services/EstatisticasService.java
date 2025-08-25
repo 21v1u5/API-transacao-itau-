@@ -22,6 +22,10 @@ public class EstatisticasService {
         log.info("Iniciada busca de estatísticas de transações pelo período de tempo " + intervalorBusca);
         List<TransacaoRequestDTO> transacoes =  transacaoService.buscarTransacoes(intervalorBusca);
 
+        if(transacoes.isEmpty()){
+            return new EstatisticasReponseDTO(0L, 0.0, 0.0,0.0,0.0);
+        }
+
         DoubleSummaryStatistics estatisticasTransacoes = transacoes.stream().
                 mapToDouble(TransacaoRequestDTO::valor).summaryStatistics();
 
