@@ -26,8 +26,8 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springdoc:pringdoc-openapi-starter-webmvc-ui:2.8.3")
-    implementation("org.springdoc:pringdoc-openapi-starter-webmvc-api:2.8.3")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.11")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-api:2.8.11")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
